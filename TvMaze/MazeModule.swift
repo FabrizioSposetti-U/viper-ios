@@ -2,7 +2,7 @@ import UIKit
 
 class MazeModule {
 
-    static func build() -> UIViewController {        
+    static func buildListShowModule() -> UIViewController {
         let view = ShowListView()
         let interactor = ShowListInteractor(showsDataMangerAPI: ShowsDataMangerAPI())
         let router = ShowListRouter()

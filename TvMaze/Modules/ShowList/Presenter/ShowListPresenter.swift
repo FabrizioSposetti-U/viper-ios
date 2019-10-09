@@ -12,7 +12,7 @@ class ShowListPresenter {
 }
 
 extension ShowListPresenter: ShowsListPresenterInterface {
-    
+
     func notifyViewLoaded() {
         view?.setupInitialView()
         view?.showLoading()
@@ -38,6 +38,9 @@ extension ShowListPresenter: ShowsListPresenterInterface {
         print("")
     }
     
+    func showShowDetail(show: ShowViewModel) {
+        router?.showShowDetail(show: show)
+    }
     
     
 }

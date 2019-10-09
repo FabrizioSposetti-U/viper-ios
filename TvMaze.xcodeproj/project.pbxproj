@@ -62,15 +62,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		69A22D50234D634400CCA630 /* Modules */ = {
+		699CC8C2234E5265006E1F22 /* ShowList */ = {
 			isa = PBXGroup;
 			children = (
 				69A22D51234D63C900CCA630 /* Entities */,
-				69A27DD7234CC5BD0005BB69 /* Interactor */,
-				69A27DCB234CC5250005BB69 /* Presenter */,
-				69A27DBF234CC43A0005BB69 /* Protocols */,
-				69A27DD2234CC5730005BB69 /* Router */,
 				69A27DC6234CC50C0005BB69 /* View */,
+				69A27DD2234CC5730005BB69 /* Router */,
+				69A27DBF234CC43A0005BB69 /* Protocols */,
+				69A27DCB234CC5250005BB69 /* Presenter */,
+				69A27DD7234CC5BD0005BB69 /* Interactor */,
+			);
+			path = ShowList;
+			sourceTree = "<group>";
+		};
+		699CC8C3234E5387006E1F22 /* ShowDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShowDetail;
+			sourceTree = "<group>";
+		};
+		69A22D50234D634400CCA630 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				699CC8C3234E5387006E1F22 /* ShowDetail */,
+				699CC8C2234E5265006E1F22 /* ShowList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -78,17 +94,9 @@
 		69A22D51234D63C900CCA630 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				69A22D52234D63D000CCA630 /* Show */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		69A22D52234D63D000CCA630 /* Show */ = {
-			isa = PBXGroup;
-			children = (
 				69A27DE5234CCDC70005BB69 /* ShowModel.swift */,
 			);
-			path = Show;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		69A22D53234D671000CCA630 /* Utils */ = {
@@ -173,7 +181,7 @@
 				69A27DCC234CC5250005BB69 /* ShowListPresenter.swift */,
 			);
 			name = Presenter;
-			path = TvMaze/Modules/Presenter;
+			path = TvMaze/Modules/ShowList/Presenter;
 			sourceTree = SOURCE_ROOT;
 		};
 		69A27DD2234CC5730005BB69 /* Router */ = {

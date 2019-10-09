@@ -11,7 +11,7 @@ protocol ShowsListViewInterface: class {
 protocol ShowsListPresenterInterface: class {
     // AddressListView -> AddressListPresenter
     func notifyViewLoaded()
-    func showSelected()
+    func showShowDetail(show: ShowViewModel)
     
     // AddressListInteractor -> AddressListPresenter
     func showListFetched(showList:[ShowModel])
@@ -26,5 +26,5 @@ protocol ShowsListInteractorInterface {
 
 protocol ShowListRouterInterface {
     // AddressListPresenter -> AddressListRouter
-    
+    func showShowDetail(show: ShowViewModel)
 }

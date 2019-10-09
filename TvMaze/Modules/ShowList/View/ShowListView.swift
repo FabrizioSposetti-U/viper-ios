@@ -15,7 +15,7 @@ class ShowListView: UIViewController {
     var showViewModels: [ShowViewModel] = []
     
     let tableView = UITableView()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ extension ShowListView: ShowsListViewInterface {
     
     func setupInitialView() {
         view.addSubview(tableView)
-
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -45,6 +45,7 @@ extension ShowListView: ShowsListViewInterface {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     func reloadData(showViewModels: [ShowViewModel]) {
@@ -67,5 +68,7 @@ extension ShowListView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.showShowDetail(show: showViewModels[indexPath.row])
+    }
 }
