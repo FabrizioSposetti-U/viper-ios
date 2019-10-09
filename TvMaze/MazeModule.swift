@@ -1,13 +1,13 @@
 import UIKit
 
 class MazeModule {
-
+    
     static func buildListShowModule() -> UIViewController {
         let view = ShowListView()
         let interactor = ShowListInteractor(showsDataMangerAPI: ShowsDataMangerAPI())
         let router = ShowListRouter()
         let presenter = ShowListPresenter()
-
+        
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
@@ -17,5 +17,26 @@ class MazeModule {
         router.viewController = view
         
         return view
-    }    
+    }
+    
+    
+    static func createShowDetailModule(forShow show: ShowViewModel) -> UIViewController {
+        let view = ShowDetailView(nibName: "ShowDetailView", bundle: nil) as ShowDetailView
+        let interactor = ShowDetailInteractor()
+        let router = ShowDetailRouter()
+        let presenter = ShowDetailPresenter()
+        
+        presenter.view = view
+        presenter.show = show
+        presenter.router = router
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+        
+        return view
+    }
+    
+    
 }

@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 // AddressListPresenter -> AddressListView
 protocol ShowsListViewInterface: class {
@@ -11,7 +12,7 @@ protocol ShowsListViewInterface: class {
 protocol ShowsListPresenterInterface: class {
     // AddressListView -> AddressListPresenter
     func notifyViewLoaded()
-    func showShowDetail(show: ShowViewModel)
+    func showDetailShow(show: ShowViewModel)
     
     // AddressListInteractor -> AddressListPresenter
     func showListFetched(showList:[ShowModel])
@@ -26,5 +27,6 @@ protocol ShowsListInteractorInterface {
 
 protocol ShowListRouterInterface {
     // AddressListPresenter -> AddressListRouter
-    func showShowDetail(show: ShowViewModel)
+    func presentDetailShowScreen(from view: ShowsListViewInterface, forShow show: ShowViewModel)
+
 }

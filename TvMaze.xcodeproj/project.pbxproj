@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2E410D08F86BE30552249406 /* Pods_TvMaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AE86CCBC0A21F2DF7C7F99 /* Pods_TvMaze.framework */; };
+		699CC8D7234E7586006E1F22 /* ShowDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CC8D5234E7586006E1F22 /* ShowDetailView.swift */; };
+		699CC8D8234E7586006E1F22 /* ShowDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 699CC8D6234E7586006E1F22 /* ShowDetailView.xib */; };
+		699CC8DA234E7CDD006E1F22 /* ShowDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CC8D9234E7CDD006E1F22 /* ShowDetailRouter.swift */; };
+		699CC8DC234E939F006E1F22 /* ShowDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CC8DB234E939F006E1F22 /* ShowDetailProtocols.swift */; };
+		699CC8DE234E9435006E1F22 /* ShowDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CC8DD234E9435006E1F22 /* ShowDetailPresenter.swift */; };
+		699CC8E0234E9793006E1F22 /* ShowDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CC8DF234E9793006E1F22 /* ShowDetailInteractor.swift */; };
 		69A22D57234D6E5100CCA630 /* ShowsDataManagerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A22D56234D6E5100CCA630 /* ShowsDataManagerInterface.swift */; };
 		69A22D59234D6F2A00CCA630 /* ShowsDataMangerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A22D58234D6F2A00CCA630 /* ShowsDataMangerAPI.swift */; };
 		69A27DA0234CC3DD0005BB69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A27D9F234CC3DD0005BB69 /* AppDelegate.swift */; };
@@ -30,6 +36,12 @@
 		28AE86CCBC0A21F2DF7C7F99 /* Pods_TvMaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TvMaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FEE6435F3CD8C39444FD90 /* Pods-TvMaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMaze.release.xcconfig"; path = "Target Support Files/Pods-TvMaze/Pods-TvMaze.release.xcconfig"; sourceTree = "<group>"; };
 		57B9FE9529A489F3D99138FB /* Pods-TvMaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMaze.debug.xcconfig"; path = "Target Support Files/Pods-TvMaze/Pods-TvMaze.debug.xcconfig"; sourceTree = "<group>"; };
+		699CC8D5234E7586006E1F22 /* ShowDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailView.swift; sourceTree = "<group>"; };
+		699CC8D6234E7586006E1F22 /* ShowDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDetailView.xib; sourceTree = "<group>"; };
+		699CC8D9234E7CDD006E1F22 /* ShowDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailRouter.swift; sourceTree = "<group>"; };
+		699CC8DB234E939F006E1F22 /* ShowDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailProtocols.swift; sourceTree = "<group>"; };
+		699CC8DD234E9435006E1F22 /* ShowDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailPresenter.swift; sourceTree = "<group>"; };
+		699CC8DF234E9793006E1F22 /* ShowDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailInteractor.swift; sourceTree = "<group>"; };
 		69A22D56234D6E5100CCA630 /* ShowsDataManagerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsDataManagerInterface.swift; sourceTree = "<group>"; };
 		69A22D58234D6F2A00CCA630 /* ShowsDataMangerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsDataMangerAPI.swift; sourceTree = "<group>"; };
 		69A27D9C234CC3DD0005BB69 /* TvMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,12 +77,11 @@
 		699CC8C2234E5265006E1F22 /* ShowList */ = {
 			isa = PBXGroup;
 			children = (
-				69A22D51234D63C900CCA630 /* Entities */,
-				69A27DC6234CC50C0005BB69 /* View */,
-				69A27DD2234CC5730005BB69 /* Router */,
-				69A27DBF234CC43A0005BB69 /* Protocols */,
-				69A27DCB234CC5250005BB69 /* Presenter */,
 				69A27DD7234CC5BD0005BB69 /* Interactor */,
+				69A27DCB234CC5250005BB69 /* Presenter */,
+				69A27DBF234CC43A0005BB69 /* Protocols */,
+				69A27DD2234CC5730005BB69 /* Router */,
+				69A27DC6234CC50C0005BB69 /* View */,
 			);
 			path = ShowList;
 			sourceTree = "<group>";
@@ -78,8 +89,54 @@
 		699CC8C3234E5387006E1F22 /* ShowDetail */ = {
 			isa = PBXGroup;
 			children = (
+				699CC8CA234E66CF006E1F22 /* Interactor */,
+				699CC8C9234E66C9006E1F22 /* Presenter */,
+				699CC8C8234E66B9006E1F22 /* Protocols */,
+				699CC8C7234E669B006E1F22 /* Router */,
+				699CC8C6234E6684006E1F22 /* View */,
 			);
 			path = ShowDetail;
+			sourceTree = "<group>";
+		};
+		699CC8C6234E6684006E1F22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				699CC8D5234E7586006E1F22 /* ShowDetailView.swift */,
+				699CC8D6234E7586006E1F22 /* ShowDetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		699CC8C7234E669B006E1F22 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				699CC8D9234E7CDD006E1F22 /* ShowDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		699CC8C8234E66B9006E1F22 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				699CC8DB234E939F006E1F22 /* ShowDetailProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		699CC8C9234E66C9006E1F22 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				699CC8DD234E9435006E1F22 /* ShowDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		699CC8CA234E66CF006E1F22 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				699CC8DF234E9793006E1F22 /* ShowDetailInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		69A22D50234D634400CCA630 /* Modules */ = {
@@ -146,6 +203,7 @@
 		69A27D9E234CC3DD0005BB69 /* TvMaze */ = {
 			isa = PBXGroup;
 			children = (
+				69A22D51234D63C900CCA630 /* Entities */,
 				69A27D9F234CC3DD0005BB69 /* AppDelegate.swift */,
 				69A27DA8234CC3DE0005BB69 /* Assets.xcassets */,
 				69A27DEC234CD3800005BB69 /* Constants.swift */,
@@ -288,6 +346,7 @@
 			files = (
 				69A27DAC234CC3DE0005BB69 /* LaunchScreen.storyboard in Resources */,
 				69A27DA9234CC3DE0005BB69 /* Assets.xcassets in Resources */,
+				699CC8D8234E7586006E1F22 /* ShowDetailView.xib in Resources */,
 				69A27DDF234CC8B80005BB69 /* ShowListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,11 +400,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699CC8D7234E7586006E1F22 /* ShowDetailView.swift in Sources */,
 				69A22D57234D6E5100CCA630 /* ShowsDataManagerInterface.swift in Sources */,
 				69A27DA0234CC3DD0005BB69 /* AppDelegate.swift in Sources */,
 				69A27DED234CD3800005BB69 /* Constants.swift in Sources */,
 				69A22D59234D6F2A00CCA630 /* ShowsDataMangerAPI.swift in Sources */,
 				69A27DDE234CC8B80005BB69 /* ShowListView.swift in Sources */,
+				699CC8E0234E9793006E1F22 /* ShowDetailInteractor.swift in Sources */,
 				69A27DE9234CD0650005BB69 /* APIClient.swift in Sources */,
 				69A27DCD234CC5250005BB69 /* ShowListPresenter.swift in Sources */,
 				69A27DBB234CC4080005BB69 /* ShowListProtocols.swift in Sources */,
@@ -353,7 +414,10 @@
 				69A27DB9234CC4080005BB69 /* MazeModule.swift in Sources */,
 				69A27DEB234CD0DC0005BB69 /* APIRouter.swift in Sources */,
 				69A27DD4234CC5730005BB69 /* ShowListRouter.swift in Sources */,
+				699CC8DE234E9435006E1F22 /* ShowDetailPresenter.swift in Sources */,
+				699CC8DA234E7CDD006E1F22 /* ShowDetailRouter.swift in Sources */,
 				69A27DD9234CC5BD0005BB69 /* ShowListInteractor.swift in Sources */,
+				699CC8DC234E939F006E1F22 /* ShowDetailProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
