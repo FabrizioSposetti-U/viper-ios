@@ -34,7 +34,7 @@ extension ShowListView: ShowsListViewInterface {
     }
     
     func setupInitialView() {
-        self.title = "Shows"
+        self.title = Text.Shows.description
         configureTableView()
     }
     
