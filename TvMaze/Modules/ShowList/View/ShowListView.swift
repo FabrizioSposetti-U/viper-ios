@@ -37,7 +37,7 @@ extension ShowListView: ShowsListViewInterface {
         view.addSubview(tableView)
         tableView.register(UINib(nibName: ShowTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ShowTableViewCell.nibName)
         tableView.separatorColor = UIColor.black
-        tableView.backgroundColor = UIColor.black
+        tableView.backgroundColor = UIColor.secondarySystemBackground
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true

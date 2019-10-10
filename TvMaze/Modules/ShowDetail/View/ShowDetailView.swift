@@ -13,8 +13,9 @@ class ShowDetailView: UIViewController {
     
     var presenter: ShowDetailPresenterInterface?
     @IBOutlet weak var lblShowTitle: UILabel!
-    @IBOutlet weak var lblShowSummary: UILabel!
     @IBOutlet weak var showImage: UIImageView!
+    @IBOutlet weak var tvShowSummary: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ extension ShowDetailView: ShowDetailViewInterface {
     
     func showShowDetail(forShow show: ShowViewModel) {
         lblShowTitle.text = show.name
-        lblShowSummary.text = show.summary
+        tvShowSummary.text = show.summary
         setImageFrom(show.imagen.medium, showImage)
     }
     
