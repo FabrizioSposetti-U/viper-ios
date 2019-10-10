@@ -1,8 +1,10 @@
 import Foundation
 import UIKit
 
-// AddressListPresenter -> AddressListView
+// ShowListPresenter -> ShowListView
 protocol ShowsListViewInterface: class {
+    var presenter: ShowsListPresenterInterface? { get set }
+    
     func showLoading()
     func hideLoading()
     func reloadData(showViewModels: [ShowViewModel])
@@ -10,23 +12,23 @@ protocol ShowsListViewInterface: class {
 }
 
 protocol ShowsListPresenterInterface: class {
-    // AddressListView -> AddressListPresenter
+    // ShowListView -> ShowListPresenter
     func notifyViewLoaded()
     func showDetailShow(show: ShowViewModel)
     
-    // AddressListInteractor -> AddressListPresenter
+    // ShowListInteractor -> ShowListPresenter
     func showListFetched(showList:[ShowModel])
     func showListFetchFailed(with errorMessage:String)
 }
 
 protocol ShowsListInteractorInterface {
-    // AddressListPresenter -> AddressListInteractor
+    // ShowListPresenter -> ShowListInteractor
     func fetchShowList()
 }
 
 
 protocol ShowListRouterInterface {
-    // AddressListPresenter -> AddressListRouter
+    // ShowListPresenter -> ShowListRouter
     func presentDetailShowScreen(from view: ShowsListViewInterface, forShow show: ShowViewModel)
 
 }
