@@ -19,9 +19,6 @@ extension ShowListPresenter: ShowsListPresenterInterface {
         interactor?.fetchShowList()
     }
     
-    func showSelected() {
-        
-    }
     
     func showListFetched(showList: [ShowModel]) {
         var showViewModels = [ShowViewModel]()

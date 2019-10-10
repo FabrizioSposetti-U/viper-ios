@@ -8,13 +8,17 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
 
 class ShowsDataMangerAPI: ShowsDataManagerInterface {
-        
-    func getShows(completion: @escaping (AFResult<[ShowModel]>) -> Void) {
-        APIClient.getShows { (result: AFResult<[ShowModel]>) in
-            completion(result)
-        }
+    
+    func getShows() -> Promise<[ShowModel]> {
+       return APIClient.getShows()
     }
     
 }
+
+
+
+
+

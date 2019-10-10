@@ -8,7 +8,8 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
 
 protocol ShowsDataManagerInterface {
-    func getShows(completion: @escaping (AFResult<[ShowModel]>) -> Void)
+    func getShows() -> Promise<[ShowModel]>
 }
