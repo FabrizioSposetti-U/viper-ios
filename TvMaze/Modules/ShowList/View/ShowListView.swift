@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class ShowListView: UIViewController {
     
@@ -36,7 +35,10 @@ extension ShowListView: ShowsListViewInterface {
     
     func setupInitialView() {
         view.addSubview(tableView)
-
+        tableView.register(UINib(nibName: ShowTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ShowTableViewCell.nibName)
+        tableView.separatorColor = UIColor.black
+        tableView.backgroundColor = UIColor.black
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -45,7 +47,6 @@ extension ShowListView: ShowsListViewInterface {
 
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
     
     func reloadData(showViewModels: [ShowViewModel]) {
@@ -63,12 +64,13 @@ extension ShowListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = showViewModels[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShowTableViewCell", for: indexPath) as! ShowTableViewCell
+        cell.set(show: showViewModels[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.showDetailShow(show: showViewModels[indexPath.row])
     }
+    
 }

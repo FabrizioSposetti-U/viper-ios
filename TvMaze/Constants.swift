@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct URL {
+struct K {
     static let baseURL = "http://api.tvmaze.com"
 }
 

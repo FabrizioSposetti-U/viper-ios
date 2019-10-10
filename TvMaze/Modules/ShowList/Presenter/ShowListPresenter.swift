@@ -1,6 +1,6 @@
 import UIKit
 
-typealias ShowViewModel = (name:String, id:String)
+typealias ShowViewModel = (name:String, id:String, imagen: Image, type: String)
 
 
 class ShowListPresenter {
@@ -26,7 +26,7 @@ extension ShowListPresenter: ShowsListPresenterInterface {
     func showListFetched(showList: [ShowModel]) {
         var showViewModels = [ShowViewModel]()
         for show in showList {
-            let showViewModel: ShowViewModel = (show.name, "\(show.id)")
+            let showViewModel: ShowViewModel = (show.name, "\(show.id)", show.image, show.type)
             showViewModels.append(showViewModel)
         }
         view?.hideLoading()

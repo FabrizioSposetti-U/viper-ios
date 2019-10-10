@@ -30,6 +30,9 @@
 		69A27DE9234CD0650005BB69 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A27DE8234CD0650005BB69 /* APIClient.swift */; };
 		69A27DEB234CD0DC0005BB69 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A27DEA234CD0DC0005BB69 /* APIRouter.swift */; };
 		69A27DED234CD3800005BB69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A27DEC234CD3800005BB69 /* Constants.swift */; };
+		69BE7F05234EB413003B3C09 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE7F04234EB413003B3C09 /* UIViewController+Extension.swift */; };
+		69BE7F08234EB65D003B3C09 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE7F06234EB65D003B3C09 /* ShowTableViewCell.swift */; };
+		69BE7F09234EB65D003B3C09 /* ShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69BE7F07234EB65D003B3C09 /* ShowTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		69A27DE8234CD0650005BB69 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		69A27DEA234CD0DC0005BB69 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		69A27DEC234CD3800005BB69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		69BE7F04234EB413003B3C09 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		69BE7F06234EB65D003B3C09 /* ShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewCell.swift; sourceTree = "<group>"; };
+		69BE7F07234EB65D003B3C09 /* ShowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,7 @@
 		69A22D53234D671000CCA630 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				69BE7F03234EB3F0003B3C09 /* Extensions */,
 				69A22D54234D67C700CCA630 /* DataManager */,
 				69A27DE7234CD0560005BB69 /* Networking */,
 			);
@@ -229,6 +236,8 @@
 			children = (
 				69A27DDC234CC8B80005BB69 /* ShowListView.swift */,
 				69A27DDD234CC8B80005BB69 /* ShowListView.xib */,
+				69BE7F06234EB65D003B3C09 /* ShowTableViewCell.swift */,
+				69BE7F07234EB65D003B3C09 /* ShowTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +274,14 @@
 				69A27DEA234CD0DC0005BB69 /* APIRouter.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		69BE7F03234EB3F0003B3C09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				69BE7F04234EB413003B3C09 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6E31F7226C88755EBA91E0B7 /* Frameworks */ = {
@@ -346,6 +363,7 @@
 			files = (
 				69A27DAC234CC3DE0005BB69 /* LaunchScreen.storyboard in Resources */,
 				69A27DA9234CC3DE0005BB69 /* Assets.xcassets in Resources */,
+				69BE7F09234EB65D003B3C09 /* ShowTableViewCell.xib in Resources */,
 				699CC8D8234E7586006E1F22 /* ShowDetailView.xib in Resources */,
 				69A27DDF234CC8B80005BB69 /* ShowListView.xib in Resources */,
 			);
@@ -408,6 +426,7 @@
 				69A27DDE234CC8B80005BB69 /* ShowListView.swift in Sources */,
 				699CC8E0234E9793006E1F22 /* ShowDetailInteractor.swift in Sources */,
 				69A27DE9234CD0650005BB69 /* APIClient.swift in Sources */,
+				69BE7F05234EB413003B3C09 /* UIViewController+Extension.swift in Sources */,
 				69A27DCD234CC5250005BB69 /* ShowListPresenter.swift in Sources */,
 				69A27DBB234CC4080005BB69 /* ShowListProtocols.swift in Sources */,
 				69A27DE6234CCDC70005BB69 /* ShowModel.swift in Sources */,
@@ -417,6 +436,7 @@
 				699CC8DE234E9435006E1F22 /* ShowDetailPresenter.swift in Sources */,
 				699CC8DA234E7CDD006E1F22 /* ShowDetailRouter.swift in Sources */,
 				69A27DD9234CC5BD0005BB69 /* ShowListInteractor.swift in Sources */,
+				69BE7F08234EB65D003B3C09 /* ShowTableViewCell.swift in Sources */,
 				699CC8DC234E939F006E1F22 /* ShowDetailProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,7 @@ struct ShowModel: Codable {
     let url: String
     let name: String
     let image: Image
+    let type: String
 }
 
 // MARK: - Image

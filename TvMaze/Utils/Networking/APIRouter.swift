@@ -47,7 +47,7 @@ enum APIRouter: URLRequestConvertible {
     
     // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
-        let url = try URL.baseURL.asURL()
+        let url = try K.baseURL.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
