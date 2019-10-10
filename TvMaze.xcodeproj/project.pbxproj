@@ -172,7 +172,6 @@
 				69DC81AE234F84B9000AA8DA /* Helpers */,
 				69BE7F03234EB3F0003B3C09 /* Extensions */,
 				69A22D54234D67C700CCA630 /* DataManager */,
-				69A27DE7234CD0560005BB69 /* Networking */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -215,15 +214,16 @@
 		69A27D9E234CC3DD0005BB69 /* TvMaze */ = {
 			isa = PBXGroup;
 			children = (
-				69A27D9F234CC3DD0005BB69 /* AppDelegate.swift */,
-				69A27DA8234CC3DE0005BB69 /* Assets.xcassets */,
-				69DC81B1234F8581000AA8DA /* Cells */,
-				69A27DEC234CD3800005BB69 /* Constants.swift */,
-				69A22D51234D63C900CCA630 /* Entities */,
 				69A27DAD234CC3DE0005BB69 /* Info.plist */,
 				69A5A28E234F728900203B5F /* LaunchScreen.storyboard */,
+				69A27D9F234CC3DD0005BB69 /* AppDelegate.swift */,
+				69A27DEC234CD3800005BB69 /* Constants.swift */,
 				69A27DB3234CC4080005BB69 /* MazeModule.swift */,
+				69A27DA8234CC3DE0005BB69 /* Assets.xcassets */,
+				69DC81B1234F8581000AA8DA /* Cells */,
+				69A22D51234D63C900CCA630 /* Entities */,
 				69A22D50234D634400CCA630 /* Modules */,
+				69A27DE7234CD0560005BB69 /* Networking */,
 				69DC81A8234F8050000AA8DA /* Resources */,
 				69A22D53234D671000CCA630 /* Utils */,
 			);
@@ -278,7 +278,8 @@
 				69A27DE8234CD0650005BB69 /* APIClient.swift */,
 				69A27DEA234CD0DC0005BB69 /* APIRouter.swift */,
 			);
-			path = Networking;
+			name = Networking;
+			path = Utils/Networking;
 			sourceTree = "<group>";
 		};
 		69BE7F03234EB3F0003B3C09 /* Extensions */ = {
