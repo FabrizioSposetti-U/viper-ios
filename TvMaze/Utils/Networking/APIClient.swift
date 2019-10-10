@@ -11,12 +11,17 @@ import PromiseKit
 
 class APIClient {
     
-    static func getShow<T: Decodable>(id: Int,
-                                      completion:@escaping (AFResult<T>) -> Void) {
-        let jsonDecoder = JSONDecoder()
-        AF.request(APIRouter.show(id: id))
-            .responseDecodable (decoder: jsonDecoder){ (response: DataResponse<T, AFError>) in
-                completion(response.result)
+    static func getShow<T>(id: Int) -> Promise<T> where T: Decodable {
+        return Promise { completion in
+            AF.request(APIRouter.show(id: id))
+                .responseDecodable {(response: DataResponse<T, AFError>) in
+                    switch response.result {
+                    case .success(let value):
+                        completion.fulfill(value)
+                    case .failure(let error):
+                        completion.reject(error)
+                    }
+            }
         }
     }
     
