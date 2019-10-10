@@ -3,6 +3,7 @@ import UIKit
 class MazeModule {
     
     static func buildListShowModule() -> UIViewController {
+        let navBar = UINavigationController()
         let view = ShowListView()
         let interactor = ShowListInteractor(showsDataMangerAPI: ShowsDataMangerAPI())
         let router = ShowListRouter()
@@ -16,7 +17,9 @@ class MazeModule {
         interactor.presenter = presenter
         router.viewController = view
         
-        return view
+        navBar.setViewControllers([view], animated: true)
+        
+        return navBar
     }
     
     

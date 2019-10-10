@@ -27,6 +27,7 @@ class ShowDetailView: UIViewController {
 extension ShowDetailView: ShowDetailViewInterface {
     
     func showShowDetail(forShow show: ShowViewModel) {
+        self.title = show.name
         lblShowTitle.text = show.name
         tvShowSummary.text = show.summary
         setImageFrom(show.imagen.medium, showImage)

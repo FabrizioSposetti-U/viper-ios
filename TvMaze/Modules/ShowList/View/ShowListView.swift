@@ -13,7 +13,7 @@ class ShowListView: UIViewController {
     var presenter: ShowsListPresenterInterface?
     var showViewModels: [ShowViewModel] = []
     
-    let tableView = UITableView()
+    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -34,17 +34,14 @@ extension ShowListView: ShowsListViewInterface {
     }
     
     func setupInitialView() {
-        view.addSubview(tableView)
+        self.title = "Shows"
+        configureTableView()
+    }
+    
+    func configureTableView() {
         tableView.register(UINib(nibName: ShowTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ShowTableViewCell.nibName)
         tableView.separatorColor = UIColor.black
         tableView.backgroundColor = UIColor.secondarySystemBackground
-        
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-
         tableView.delegate = self
         tableView.dataSource = self
     }
