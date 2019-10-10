@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-extension UITableViewCell {
+extension UIViewController {
     
     func setImageFrom(_ url: String, _ imageView: UIImageView) {
         let urlResource = URL(string: url)!

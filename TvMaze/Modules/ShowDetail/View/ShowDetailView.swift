@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ShowDetailView: UIViewController {
     
     var presenter: ShowDetailPresenterInterface?
-
+    @IBOutlet weak var lblShowTitle: UILabel!
+    @IBOutlet weak var lblShowSummary: UILabel!
+    @IBOutlet weak var showImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.notifyViewLoaded()
@@ -22,12 +26,12 @@ class ShowDetailView: UIViewController {
 extension ShowDetailView: ShowDetailViewInterface {
     
     func showShowDetail(forShow show: ShowViewModel) {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        label.center = CGPoint(x: 160, y: 285)
-        label.textAlignment = .center
-        label.text = show.name
-        self.view.addSubview(label)
+        lblShowTitle.text = show.name
+        lblShowSummary.text = show.summary
+        setImageFrom(show.imagen.medium, showImage)
     }
     
     
 }
+
+

@@ -16,21 +16,9 @@ class ShowTableViewCell: UITableViewCell {
     @IBOutlet weak var lblShowTitle: UILabel!
     @IBOutlet weak var lblTypeShow: UILabel!
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
-    
     func set(show: ShowViewModel) {
         lblShowTitle.text = show.name
         lblTypeShow.text = "Type: " + "\(show.type)"
-        setImageFrom(show.imagen.medium, showImage)
     }
     
 }

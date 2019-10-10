@@ -14,6 +14,7 @@ struct ShowModel: Codable {
     let name: String
     let image: Image
     let type: String
+    let summary: String
 }
 
 // MARK: - Image
