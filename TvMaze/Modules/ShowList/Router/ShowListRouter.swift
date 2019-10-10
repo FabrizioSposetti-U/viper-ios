@@ -9,9 +9,8 @@ class ShowListRouter: ShowListRouterInterface {
         let showDetailViewController = MazeModule.createShowDetailModule(forShow: show)
         
         if let sourceView = view as? UIViewController {
-                sourceView.navigationController?.pushViewController(showDetailViewController, animated: true)
-             }
-        
+            sourceView.navigationController?.pushViewController(showDetailViewController, animated: true)
+        }
     }
     
 }

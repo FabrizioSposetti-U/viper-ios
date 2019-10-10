@@ -12,6 +12,7 @@ import Foundation
 protocol ShowDetailViewInterface: class {
     var presenter: ShowDetailPresenterInterface? { get set }
     
+
     func showShowDetail(forShow show: ShowViewModel)
 }
 
@@ -20,14 +21,14 @@ protocol ShowDetailPresenterInterface: class {
     func notifyViewLoaded()
 }
 
-protocol ShowDetailListInteractorInterface {
+// ShowDetailPresenter -> ShowDetailInteractor
+protocol ShowDetailInteractorInterface {
     
 }
 
+// ShowDetailPresenter -> ShowDetailRouter
 protocol ShowDetailRouterInterface {
     
 }
 
-protocol ShowDetailInteractorInterface {
-    
-}
+

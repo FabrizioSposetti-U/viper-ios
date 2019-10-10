@@ -32,7 +32,7 @@ extension ShowListPresenter: ShowsListPresenterInterface {
     
     
     func showListFetchFailed(with errorMessage: String) {
-        print("")
+        print("showListFetchFailed")
     }
     
     func showDetailShow(show: ShowViewModel) {
