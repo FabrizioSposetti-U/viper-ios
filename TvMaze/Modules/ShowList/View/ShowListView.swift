@@ -14,6 +14,7 @@ class ShowListView: UIViewController {
     var showViewModels: [ShowViewModel] = []
     
     @IBOutlet weak var tableView: UITableView!
+    let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     
     override func viewDidLoad() {
@@ -26,11 +27,15 @@ class ShowListView: UIViewController {
 extension ShowListView: ShowsListViewInterface {
     
     func showLoading() {
-        
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.color = .blue
+        self.view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
     }
     
     func hideLoading() {
-        
+        activityIndicator.stopAnimating()
     }
     
     func setupInitialView() {
