@@ -226,11 +226,11 @@
 		69A27D93234CC3DD0005BB69 = {
 			isa = PBXGroup;
 			children = (
+				6E31F7226C88755EBA91E0B7 /* Frameworks */,
+				A5463FE792FA6FFDACEBE80C /* Pods */,
+				69A27D9D234CC3DD0005BB69 /* Products */,
 				69A27D9E234CC3DD0005BB69 /* TvMaze */,
 				69A00A6B2350C0C9009F6389 /* TvMazeTests */,
-				69A27D9D234CC3DD0005BB69 /* Products */,
-				A5463FE792FA6FFDACEBE80C /* Pods */,
-				6E31F7226C88755EBA91E0B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
