@@ -1,4 +1,3 @@
-import UIKit
 
 typealias ShowViewModel = (name:String, id:String, imagen: Image, type: String, summary: String)
 
