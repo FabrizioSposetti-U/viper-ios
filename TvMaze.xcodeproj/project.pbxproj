@@ -14,6 +14,7 @@
 		699CC8DC234E939F006E1F22 /* ShowDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CC8DB234E939F006E1F22 /* ShowDetailProtocols.swift */; };
 		699CC8DE234E9435006E1F22 /* ShowDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CC8DD234E9435006E1F22 /* ShowDetailPresenter.swift */; };
 		699CC8E0234E9793006E1F22 /* ShowDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CC8DF234E9793006E1F22 /* ShowDetailInteractor.swift */; };
+		69A00A6D2350C0C9009F6389 /* TvMazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A00A6C2350C0C9009F6389 /* TvMazeTests.swift */; };
 		69A22D57234D6E5100CCA630 /* ShowsDataManagerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A22D56234D6E5100CCA630 /* ShowsDataManagerInterface.swift */; };
 		69A22D59234D6F2A00CCA630 /* ShowsDataMangerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A22D58234D6F2A00CCA630 /* ShowsDataMangerAPI.swift */; };
 		69A27DA0234CC3DD0005BB69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A27D9F234CC3DD0005BB69 /* AppDelegate.swift */; };
@@ -37,6 +38,16 @@
 		69DC81B0234F84CB000AA8DA /* StringsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC81AF234F84CB000AA8DA /* StringsHelper.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		69A00A6F2350C0C9009F6389 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69A27D94234CC3DD0005BB69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69A27D9B234CC3DD0005BB69;
+			remoteInfo = TvMaze;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		28AE86CCBC0A21F2DF7C7F99 /* Pods_TvMaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TvMaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FEE6435F3CD8C39444FD90 /* Pods-TvMaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMaze.release.xcconfig"; path = "Target Support Files/Pods-TvMaze/Pods-TvMaze.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +58,9 @@
 		699CC8DB234E939F006E1F22 /* ShowDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailProtocols.swift; sourceTree = "<group>"; };
 		699CC8DD234E9435006E1F22 /* ShowDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailPresenter.swift; sourceTree = "<group>"; };
 		699CC8DF234E9793006E1F22 /* ShowDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailInteractor.swift; sourceTree = "<group>"; };
+		69A00A6A2350C0C9009F6389 /* TvMazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TvMazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A00A6C2350C0C9009F6389 /* TvMazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeTests.swift; sourceTree = "<group>"; };
+		69A00A6E2350C0C9009F6389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69A22D56234D6E5100CCA630 /* ShowsDataManagerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsDataManagerInterface.swift; sourceTree = "<group>"; };
 		69A22D58234D6F2A00CCA630 /* ShowsDataMangerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsDataMangerAPI.swift; sourceTree = "<group>"; };
 		69A27D9C234CC3DD0005BB69 /* TvMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +87,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		69A00A672350C0C9009F6389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		69A27D99234CC3DD0005BB69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +170,15 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		69A00A6B2350C0C9009F6389 /* TvMazeTests */ = {
+			isa = PBXGroup;
+			children = (
+				69A00A6C2350C0C9009F6389 /* TvMazeTests.swift */,
+				69A00A6E2350C0C9009F6389 /* Info.plist */,
+			);
+			path = TvMazeTests;
+			sourceTree = "<group>";
+		};
 		69A22D50234D634400CCA630 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				69A27D9E234CC3DD0005BB69 /* TvMaze */,
+				69A00A6B2350C0C9009F6389 /* TvMazeTests */,
 				69A27D9D234CC3DD0005BB69 /* Products */,
 				A5463FE792FA6FFDACEBE80C /* Pods */,
 				6E31F7226C88755EBA91E0B7 /* Frameworks */,
@@ -207,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				69A27D9C234CC3DD0005BB69 /* TvMaze.app */,
+				69A00A6A2350C0C9009F6389 /* TvMazeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,6 +367,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		69A00A692350C0C9009F6389 /* TvMazeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69A00A732350C0C9009F6389 /* Build configuration list for PBXNativeTarget "TvMazeTests" */;
+			buildPhases = (
+				69A00A662350C0C9009F6389 /* Sources */,
+				69A00A672350C0C9009F6389 /* Frameworks */,
+				69A00A682350C0C9009F6389 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69A00A702350C0C9009F6389 /* PBXTargetDependency */,
+			);
+			name = TvMazeTests;
+			productName = TvMazeTests;
+			productReference = 69A00A6A2350C0C9009F6389 /* TvMazeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		69A27D9B234CC3DD0005BB69 /* TvMaze */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69A27DB0234CC3DE0005BB69 /* Build configuration list for PBXNativeTarget "TvMaze" */;
@@ -364,6 +414,10 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Fabrizio Sposetti";
 				TargetAttributes = {
+					69A00A692350C0C9009F6389 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 69A27D9B234CC3DD0005BB69;
+					};
 					69A27D9B234CC3DD0005BB69 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -383,11 +437,19 @@
 			projectRoot = "";
 			targets = (
 				69A27D9B234CC3DD0005BB69 /* TvMaze */,
+				69A00A692350C0C9009F6389 /* TvMazeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		69A00A682350C0C9009F6389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		69A27D9A234CC3DD0005BB69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +508,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		69A00A662350C0C9009F6389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A00A6D2350C0C9009F6389 /* TvMazeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		69A27D98234CC3DD0005BB69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,6 +546,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		69A00A702350C0C9009F6389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69A27D9B234CC3DD0005BB69 /* TvMaze */;
+			targetProxy = 69A00A6F2350C0C9009F6389 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		69DC81AD234F843E000AA8DA /* Strings.strings */ = {
 			isa = PBXVariantGroup;
@@ -488,6 +566,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		69A00A712350C0C9009F6389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TvMazeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maze.TvMazeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TvMaze.app/TvMaze";
+			};
+			name = Debug;
+		};
+		69A00A722350C0C9009F6389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TvMazeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maze.TvMazeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TvMaze.app/TvMaze";
+			};
+			name = Release;
+		};
 		69A27DAE234CC3DE0005BB69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -641,6 +757,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		69A00A732350C0C9009F6389 /* Build configuration list for PBXNativeTarget "TvMazeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A00A712350C0C9009F6389 /* Debug */,
+				69A00A722350C0C9009F6389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		69A27D97234CC3DD0005BB69 /* Build configuration list for PBXProject "TvMaze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
