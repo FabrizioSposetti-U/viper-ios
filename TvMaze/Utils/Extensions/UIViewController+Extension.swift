@@ -12,7 +12,8 @@ import Kingfisher
 extension UIViewController {
     
     func setImageFrom(_ url: String, _ imageView: UIImageView) {
-        let urlResource = URL(string: url)!
+        guard let url = URL(string: url) else { return }
+        let urlResource = url
         let processor = RoundCornerImageProcessor(cornerRadius: 20)
         imageView.kf.indicatorType = .activity
         imageView.kf.setImage(
