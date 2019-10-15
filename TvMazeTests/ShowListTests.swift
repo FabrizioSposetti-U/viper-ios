@@ -13,15 +13,15 @@ import PromiseKit
 class ShowListTests: XCTestCase {
     
     let view = ShowListView()
-    let interactor = ShowListInteractor(showsDataMangerAPI: ShowMockRepository())
+    let interactor = ShowListInteractor(showsDataMangerAPI: MockApiDataManager())
     let router = ShowListRouter()
     let presenter = ShowListPresenter()
-
+    
     override func setUp() {
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
-
+        
         view.presenter = presenter
         view.title = "Shows"
         interactor.presenter = presenter
@@ -29,23 +29,23 @@ class ShowListTests: XCTestCase {
         
         view.loadViewIfNeeded()
     }
-
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func testShowsCount() {
         //arrange
         let expectation = XCTestExpectation(description: "Shows count is 1")
         
         //act
-
+        
         //assert
         DispatchQueue.main.asyncAfter(deadline: TestConstants.delay) {
             expectation.fulfill()
             XCTAssertEqual(self.view.showViewModels.count, 1)
         }
-
+        
         
         wait(for: [expectation], timeout: TestConstants.timeout)
     }
@@ -86,21 +86,8 @@ class ShowListTests: XCTestCase {
         
         wait(for: [expectation], timeout: TestConstants.timeout)
     }
-
-
-
-}
-
-class ShowMockRepository: ShowsDataMangerAPI {
     
-    override func getShows() -> Promise<[Show]> {
-        return Promise.value([
-            createShow()
-            ])
-    }
-    
-    func createShow() -> Show {
-        return Show(id: 1, url: "", name: "Arrow", image: Image(medium: "", original: ""), type: "", status: "", language: "", summary: "")
-    }
     
 }
+
+

@@ -16,14 +16,14 @@ class ShowDetailPresenter: ShowDetailPresenterInterface {
     weak var view: ShowDetailViewInterface?
     var interactor: ShowDetailInteractorInterface?
     var router: ShowDetailRouterInterface?
-    var show: ShowViewModel?
+    var show: Show?
     
     
     func notifyViewLoaded() {
-        if let show = show, let showId = Int(show.id) {
+        if let show = show {
             view?.setupInitialView()
             view?.showLoading()
-            interactor?.getEpisodesFromShow(showId: showId)
+            interactor?.getEpisodesFromShow(showId: Int(show.id))
         }
     }
     
@@ -40,7 +40,7 @@ class ShowDetailPresenter: ShowDetailPresenterInterface {
     
     func showDetailShowInformation() {
         guard let show = show else { return }
-        let showViewModel: ShowViewModel = (show.name, "\(show.id)", show.imagen, show.type, show.summary, show.language, show.status)
+        let showViewModel: ShowViewModel = (show.name, "\(show.id)", show.image, show.type, show.summary, show.language, show.status)
         view?.showDetailShowInformation(forShow: showViewModel)
     }
     
