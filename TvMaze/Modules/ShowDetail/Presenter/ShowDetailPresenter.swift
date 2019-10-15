@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-typealias EpisodeViewModel = (name: String, season: String, number: String, imagen: Image)
+typealias EpisodeViewModel = (name: String, season: String, number: String, imagen: Image?)
 
 class ShowDetailPresenter: ShowDetailPresenterInterface {
     

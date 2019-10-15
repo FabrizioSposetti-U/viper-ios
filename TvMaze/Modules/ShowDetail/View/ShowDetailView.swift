@@ -117,10 +117,12 @@ extension ShowDetailView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as! EpisodeTableViewCell
-        setImageFrom(episodesViewModel[indexPath.row].imagen.original, cell.episodeImage)
+        if let imagen = episodesViewModel[indexPath.row].imagen {
+            setImageFrom(imagen.original, cell.episodeImage)
+        }
         cell.set(episode: episodesViewModel[indexPath.row])
         return cell
-
+        
         
     }
     

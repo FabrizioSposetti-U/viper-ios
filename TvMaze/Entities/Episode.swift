@@ -11,6 +11,6 @@ import Foundation
 struct Episode: Codable {
     let name: String
     let season, number: Int
-    let image: Image
+    let image: Image?
 
 }
