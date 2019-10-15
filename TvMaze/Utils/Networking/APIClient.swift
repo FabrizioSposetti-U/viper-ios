@@ -11,9 +11,9 @@ import PromiseKit
 
 class APIClient {
     
-    static func getShow<T>(id: Int) -> Promise<T> where T: Decodable {
+    static func getEpisodesFromShow<T>(id: Int) -> Promise<T> where T: Decodable {
         return Promise { completion in
-            AF.request(APIRouter.show(id: id))
+            AF.request(APIRouter.episodesFromShow(id: id))
                 .responseDecodable {(response: DataResponse<T, AFError>) in
                     switch response.result {
                     case .success(let value):

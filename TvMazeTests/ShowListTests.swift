@@ -93,14 +93,14 @@ class ShowListTests: XCTestCase {
 
 class ShowMockRepository: ShowsDataMangerAPI {
     
-    override func getShows() -> Promise<[ShowModel]> {
+    override func getShows() -> Promise<[Show]> {
         return Promise.value([
             createShow()
             ])
     }
     
-    func createShow() -> ShowModel {
-        return ShowModel(id: 1, url: "", name: "Arrow", image: Image(medium: "", original: ""), type: "", summary: "")
+    func createShow() -> Show {
+        return Show(id: 1, url: "", name: "Arrow", image: Image(medium: "", original: ""), type: "", status: "", language: "", summary: "")
     }
     
 }

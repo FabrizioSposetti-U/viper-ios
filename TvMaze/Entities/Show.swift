@@ -8,16 +8,15 @@
 
 import Foundation
 
-struct ShowModel: Codable {
+struct Show: Codable {
     let id: Int
     let url: String
     let name: String
     let image: Image
     let type: String
+    let status: String
+    let language: String
     let summary: String
 }
 
-// MARK: - Image
-struct Image: Codable {
-    let medium, original: String
-}
+

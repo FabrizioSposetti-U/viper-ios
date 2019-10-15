@@ -25,7 +25,7 @@ class MazeModule {
     
     static func createShowDetailModule(forShow show: ShowViewModel) -> UIViewController {
         let view = ShowDetailView(nibName: "ShowDetailView", bundle: nil) as ShowDetailView
-        let interactor = ShowDetailInteractor()
+        let interactor = ShowDetailInteractor(apiDataManager: ShowsDataMangerAPI())
         let router = ShowDetailRouter()
         let presenter = ShowDetailPresenter()
         

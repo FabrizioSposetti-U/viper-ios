@@ -14,7 +14,7 @@ extension ShowListInteractor: ShowsListInteractorInterface {
     
     func fetchShowList() {
         apiDataManager?.getShows()
-        .done { (shows: [ShowModel]) in
+        .done { (shows: [Show]) in
             self.presenter?.showListFetched(showList: shows)
         }
             

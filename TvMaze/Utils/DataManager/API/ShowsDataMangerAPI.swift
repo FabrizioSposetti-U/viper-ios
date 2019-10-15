@@ -12,10 +12,13 @@ import PromiseKit
 
 class ShowsDataMangerAPI: ShowsDataManagerInterface {
     
-    func getShows() -> Promise<[ShowModel]> {
+    func getShows() -> Promise<[Show]> {
        return APIClient.getShows()
     }
     
+    func getEpisodesFromShow(id: Int) -> Promise<[Episode]> {
+        return APIClient.getEpisodesFromShow(id: id)
+    }
 }
 
 

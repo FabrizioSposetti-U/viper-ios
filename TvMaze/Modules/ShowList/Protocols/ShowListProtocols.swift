@@ -17,7 +17,7 @@ protocol ShowsListPresenterInterface: class {
     func showDetailShow(show: ShowViewModel)
     
     // ShowListInteractor -> ShowListPresenter
-    func showListFetched(showList:[ShowModel])
+    func showListFetched(showList:[Show])
     func showListFetchFailed(with errorMessage:String)
 }
 
