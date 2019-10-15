@@ -8,6 +8,12 @@ target 'TvMaze' do
   # Pods for TvMaze
   pod 'Alamofire', '~> 5.0.0-rc.2'
   pod 'Kingfisher', '~> 4.0'
-  pod "PromiseKit", "~> 6.8"
+  pod 'PromiseKit', "~> 6.8"
+
+  target 'TvMazeTests' do
+   inherit! :search_paths
+   pod 'PromiseKit', "~> 6.8"
+
+  end
 
 end
