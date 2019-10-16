@@ -11,23 +11,9 @@ import PromiseKit
 
 class APIClient {
     
-    static func getShow<T>(id: Int) -> Promise<T> where T: Decodable {
+    static func executeRequest<T>(request: Alamofire.URLRequestConvertible) -> Promise<T> where T: Decodable {
         return Promise { completion in
-            AF.request(APIRouter.show(id: id))
-                .responseDecodable {(response: DataResponse<T, AFError>) in
-                    switch response.result {
-                    case .success(let value):
-                        completion.fulfill(value)
-                    case .failure(let error):
-                        completion.reject(error)
-                    }
-            }
-        }
-    }
-    
-    static func getShows<T>() -> Promise<T> where T: Decodable {
-        return Promise { completion in
-            AF.request(APIRouter.shows)
+            AF.request(request)
                 .responseDecodable {(response: DataResponse<T, AFError>) in
                     switch response.result {
                     case .success(let value):

@@ -1,6 +1,7 @@
 
-typealias ShowViewModel = (name:String, id:String, imagen: Image, type: String, summary: String)
-
+typealias ShowViewModel = (name: String, id: String,
+imagen: Image, type: String,
+summary: String, language: String, status: String)
 
 class ShowListPresenter {
 
@@ -19,10 +20,10 @@ extension ShowListPresenter: ShowsListPresenterInterface {
     }
     
     
-    func showListFetched(showList: [ShowModel]) {
+    func showListFetched(showList: [Show]) {
         var showViewModels = [ShowViewModel]()
         for show in showList {
-            let showViewModel: ShowViewModel = (show.name, "\(show.id)", show.image, show.type, show.summary)
+            let showViewModel: ShowViewModel = (show.name, "\(show.id)", show.image, show.type, show.summary, show.language, show.status)
             showViewModels.append(showViewModel)
         }
         view?.hideLoading()
@@ -35,7 +36,7 @@ extension ShowListPresenter: ShowsListPresenterInterface {
     }
     
     func showDetailShow(show: ShowViewModel) {
-        router?.presentDetailShowScreen(from: view!, forShow: show)
+        router?.presentDetailShowScreen(forShow: show)
     }
     
     

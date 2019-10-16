@@ -11,5 +11,6 @@ import Alamofire
 import PromiseKit
 
 protocol ShowsDataManagerInterface {
-    func getShows() -> Promise<[ShowModel]>
+    func getShows() -> Promise<[Show]>
+    func getEpisodesFromShow(id: Int) -> Promise<[Episode]>
 }

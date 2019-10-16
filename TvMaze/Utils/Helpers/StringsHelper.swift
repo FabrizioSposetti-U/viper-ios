@@ -34,5 +34,9 @@ extension StringProtocol {
 enum Text: String, LocalizedEnum {
     
     case Shows
-
+    case Ups
+    case TryAgain
+    case Cancel
+    case ErrorAlertMessage
+    
 }
