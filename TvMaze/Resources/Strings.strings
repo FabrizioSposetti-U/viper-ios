@@ -12,3 +12,5 @@
 "ErrorAlertMessage" = "Something went wrong!";
 "TryAgain" = "Try Again";
 "Cancel" = "Cancel";
+"SearchPerson" = "Search Person";
+"Persons" = "Persons";

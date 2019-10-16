@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		698347422356593100DA0C85 /* MockApiDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698347412356593100DA0C85 /* MockApiDataManager.swift */; };
+		6985B00C23578D1C00606F15 /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B00B23578D1C00606F15 /* NavigationBuilder.swift */; };
+		6985B00F23578E6300606F15 /* MazeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B00E23578E6300606F15 /* MazeTabBarController.swift */; };
+		6985B011235790DD00606F15 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B010235790DD00606F15 /* TabBarRouter.swift */; };
+		6985B01A23579FCC00606F15 /* PersonSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B01823579FCC00606F15 /* PersonSearchViewController.swift */; };
+		6985B01B23579FCC00606F15 /* PersonSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6985B01923579FCC00606F15 /* PersonSearchViewController.xib */; };
+		6985B01D2357A06100606F15 /* PersonSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B01C2357A06100606F15 /* PersonSearchInteractor.swift */; };
+		6985B01F2357A07900606F15 /* PersonSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B01E2357A07900606F15 /* PersonSearchPresenter.swift */; };
+		6985B0212357A08E00606F15 /* PersonSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B0202357A08E00606F15 /* PersonSearchRouter.swift */; };
+		6985B0232357A16000606F15 /* PersonSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B0222357A16000606F15 /* PersonSearchProtocols.swift */; };
 		6995ED0F23562AE00034FA83 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6995ED0D23562AE00034FA83 /* EpisodeTableViewCell.swift */; };
 		6995ED1023562AE00034FA83 /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6995ED0E23562AE00034FA83 /* EpisodeTableViewCell.xib */; };
 		6995ED1A23562B5B0034FA83 /* ShowDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6995ED1923562B5A0034FA83 /* ShowDetailView.xib */; };
@@ -63,6 +72,15 @@
 		5391727FC7A2C2ABE271E29C /* Pods-TvMaze-TvMazeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMaze-TvMazeTests.release.xcconfig"; path = "Target Support Files/Pods-TvMaze-TvMazeTests/Pods-TvMaze-TvMazeTests.release.xcconfig"; sourceTree = "<group>"; };
 		57B9FE9529A489F3D99138FB /* Pods-TvMaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMaze.debug.xcconfig"; path = "Target Support Files/Pods-TvMaze/Pods-TvMaze.debug.xcconfig"; sourceTree = "<group>"; };
 		698347412356593100DA0C85 /* MockApiDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiDataManager.swift; sourceTree = "<group>"; };
+		6985B00B23578D1C00606F15 /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
+		6985B00E23578E6300606F15 /* MazeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeTabBarController.swift; sourceTree = "<group>"; };
+		6985B010235790DD00606F15 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		6985B01823579FCC00606F15 /* PersonSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchViewController.swift; sourceTree = "<group>"; };
+		6985B01923579FCC00606F15 /* PersonSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonSearchViewController.xib; sourceTree = "<group>"; };
+		6985B01C2357A06100606F15 /* PersonSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchInteractor.swift; sourceTree = "<group>"; };
+		6985B01E2357A07900606F15 /* PersonSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchPresenter.swift; sourceTree = "<group>"; };
+		6985B0202357A08E00606F15 /* PersonSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchRouter.swift; sourceTree = "<group>"; };
+		6985B0222357A16000606F15 /* PersonSearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchProtocols.swift; sourceTree = "<group>"; };
 		6995ED0D23562AE00034FA83 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		6995ED0E23562AE00034FA83 /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
 		6995ED1923562B5A0034FA83 /* ShowDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDetailView.xib; sourceTree = "<group>"; };
@@ -128,6 +146,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6985B00A23578CF600606F15 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				6985B00B23578D1C00606F15 /* NavigationBuilder.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		6985B00D23578E3000606F15 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6985B00E23578E6300606F15 /* MazeTabBarController.swift */,
+				6985B010235790DD00606F15 /* TabBarRouter.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		6985B0122357926C00606F15 /* PersonSearch */ = {
+			isa = PBXGroup;
+			children = (
+				6985B017235792E400606F15 /* Protocols */,
+				6985B016235792DD00606F15 /* Presenter */,
+				6985B015235792CD00606F15 /* Interactor */,
+				6985B014235792C600606F15 /* View */,
+				6985B013235792B900606F15 /* Router */,
+			);
+			path = PersonSearch;
+			sourceTree = "<group>";
+		};
+		6985B013235792B900606F15 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6985B0202357A08E00606F15 /* PersonSearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		6985B014235792C600606F15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6985B01823579FCC00606F15 /* PersonSearchViewController.swift */,
+				6985B01923579FCC00606F15 /* PersonSearchViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6985B015235792CD00606F15 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6985B01C2357A06100606F15 /* PersonSearchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6985B016235792DD00606F15 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6985B01E2357A07900606F15 /* PersonSearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6985B017235792E400606F15 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6985B0222357A16000606F15 /* PersonSearchProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		6995ED0C23562AE00034FA83 /* Episode */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,8 +323,11 @@
 		69A22D50234D634400CCA630 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6985B00A23578CF600606F15 /* Navigation */,
+				6985B0122357926C00606F15 /* PersonSearch */,
 				699CC8C3234E5387006E1F22 /* ShowDetail */,
 				699CC8C2234E5265006E1F22 /* ShowList */,
+				6985B00D23578E3000606F15 /* TabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -519,6 +610,7 @@
 				69A27DA9234CC3DE0005BB69 /* Assets.xcassets in Resources */,
 				69BE7F09234EB65D003B3C09 /* ShowTableViewCell.xib in Resources */,
 				6995ED1023562AE00034FA83 /* EpisodeTableViewCell.xib in Resources */,
+				6985B01B23579FCC00606F15 /* PersonSearchViewController.xib in Resources */,
 				69A5A28F234F728900203B5F /* LaunchScreen.storyboard in Resources */,
 				6995ED3223562E700034FA83 /* Strings.strings in Resources */,
 				69A27DDF234CC8B80005BB69 /* ShowListView.xib in Resources */,
@@ -626,15 +718,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6985B011235790DD00606F15 /* TabBarRouter.swift in Sources */,
 				6995ED3E235632510034FA83 /* UIViewController+Extension.swift in Sources */,
 				69A27DA0234CC3DD0005BB69 /* AppDelegate.swift in Sources */,
 				6995ED2623562C350034FA83 /* Image.swift in Sources */,
+				6985B0212357A08E00606F15 /* PersonSearchRouter.swift in Sources */,
 				69A27DED234CD3800005BB69 /* Constants.swift in Sources */,
+				6985B01F2357A07900606F15 /* PersonSearchPresenter.swift in Sources */,
 				69A27DDE234CC8B80005BB69 /* ShowListView.swift in Sources */,
+				6985B0232357A16000606F15 /* PersonSearchProtocols.swift in Sources */,
 				6995ED2823562C3B0034FA83 /* Show.swift in Sources */,
 				6995ED2423562C2E0034FA83 /* Episode.swift in Sources */,
 				6995ED38235631690034FA83 /* ShowDetailView.swift in Sources */,
+				6985B01D2357A06100606F15 /* PersonSearchInteractor.swift in Sources */,
+				6985B00F23578E6300606F15 /* MazeTabBarController.swift in Sources */,
+				6985B01A23579FCC00606F15 /* PersonSearchViewController.swift in Sources */,
 				69A27DE9234CD0650005BB69 /* APIClient.swift in Sources */,
+				6985B00C23578D1C00606F15 /* NavigationBuilder.swift in Sources */,
 				6995ED3023562E580034FA83 /* StringsHelper.swift in Sources */,
 				6995ED36235631040034FA83 /* ShowDetailPresenter.swift in Sources */,
 				69A27DCD234CC5250005BB69 /* ShowListPresenter.swift in Sources */,
