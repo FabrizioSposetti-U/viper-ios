@@ -36,7 +36,7 @@ extension ShowListPresenter: ShowsListPresenterInterface {
     }
     
     func showDetailShow(show: ShowViewModel) {
-        router?.presentDetailShowScreen(from: view!, forShow: show)
+        router?.presentDetailShowScreen(forShow: show)
     }
     
     

@@ -29,6 +29,6 @@ protocol ShowsListInteractorInterface {
 
 protocol ShowListRouterInterface {
     // ShowListPresenter -> ShowListRouter
-    func presentDetailShowScreen(from view: ShowsListViewInterface, forShow show: ShowViewModel)
+    func presentDetailShowScreen(forShow show: ShowViewModel)
 
 }
