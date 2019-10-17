@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonSearchViewController" customModule="TvMaze" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="N3a-4g-MPD" id="usa-XW-QDe"/>
+                <outlet property="tableView" destination="PTN-Nt-hRA" id="FMa-fL-LQo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,17 +19,24 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person search is coming soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VW-sN-hGq">
-                    <rect key="frame" x="93" y="437.5" width="228.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-4g-MPD">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PTN-Nt-hRA">
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="5VW-sN-hGq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hat-v9-e8A"/>
-                <constraint firstItem="5VW-sN-hGq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tfQ-1C-6zg"/>
+                <constraint firstItem="PTN-Nt-hRA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BUA-t9-BIr"/>
+                <constraint firstItem="N3a-4g-MPD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="C9Y-vG-Xux"/>
+                <constraint firstItem="N3a-4g-MPD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Tug-uO-HZ2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PTN-Nt-hRA" secondAttribute="trailing" id="VAQ-bt-fKM"/>
+                <constraint firstItem="N3a-4g-MPD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mj4-gp-x7h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PTN-Nt-hRA" secondAttribute="bottom" id="r6P-CZ-wSg"/>
+                <constraint firstItem="PTN-Nt-hRA" firstAttribute="top" secondItem="N3a-4g-MPD" secondAttribute="bottom" id="tmu-5J-1Rz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="135"/>

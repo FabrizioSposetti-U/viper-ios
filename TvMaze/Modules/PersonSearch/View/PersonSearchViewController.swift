@@ -10,6 +10,10 @@ import UIKit
 
 class PersonSearchViewController: UIViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var persons: [PersonViewModel] = []
     var presenter: PersonSearchPresenter?
 
     override func viewDidLoad() {
@@ -22,8 +26,49 @@ class PersonSearchViewController: UIViewController {
 extension PersonSearchViewController: PersonSearchViewInterface {
     
     func setupInitialView() {
-        self.title = Text.SearchPerson.description
+        self.title = Text.SearchPeople.description
+        configureSearchBar()
+        configureTableView()
     }
     
+    func configureTableView() {
+        tableView.register(UINib(nibName: ShowTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ShowTableViewCell.nibName)
+        tableView.separatorColor = UIColor.black
+        tableView.backgroundColor = UIColor.secondarySystemBackground
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    private func configureSearchBar() {
+        searchBar.delegate = self
+    }
+    
+    func reloadData(personViewModels: [PersonViewModel]) {
+        self.persons = personViewModels
+        tableView.reloadData()
+    }
+    
+}
+
+
+extension PersonSearchViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return persons.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = persons[indexPath.row].name
+        return cell
+    }
+    
+}
+
+extension PersonSearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter?.getPersons(name: searchText)
+    }
     
 }

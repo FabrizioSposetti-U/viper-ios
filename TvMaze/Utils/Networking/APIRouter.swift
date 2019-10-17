@@ -14,6 +14,7 @@ enum APIRouter: URLRequestConvertible {
     
     case shows
     case episodesFromShow(id: Int)
+    case persons(name: String)
     
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
@@ -21,6 +22,8 @@ enum APIRouter: URLRequestConvertible {
         case .shows:
             return .get
         case .episodesFromShow:
+            return .get
+        case .persons:
             return .get
         }
     }
@@ -32,6 +35,8 @@ enum APIRouter: URLRequestConvertible {
             return "/shows"
         case .episodesFromShow(let id):
             return "/shows/\(id)/episodes"
+        case .persons:
+            return "/search/people/"
         }
     }
     
@@ -42,14 +47,37 @@ enum APIRouter: URLRequestConvertible {
             return nil
         case .episodesFromShow:
             return nil
+        case .persons:
+            return nil
         }
     }
     
+    
+    // Mark: - QueryItems
+    private var queryItems: URLQueryItem? {
+        switch self {
+        case .shows:
+            return nil
+        case .episodesFromShow:
+            return nil
+        case .persons(let name):
+            return URLQueryItem(name: "q", value: name)
+        }
+    }
+    
+    
     // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
-        let url = try K.baseURL.asURL()
+        var urlComponents = URLComponents(string: K.baseURL)!
+        
+        if let queryItems = queryItems {
+            urlComponents.queryItems = [queryItems]
+        }
+        
+        let url = try urlComponents.url!.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+    
         
         // HTTP Method
         urlRequest.httpMethod = method.rawValue
@@ -71,6 +99,4 @@ enum APIRouter: URLRequestConvertible {
     }
     
 }
-
-
 

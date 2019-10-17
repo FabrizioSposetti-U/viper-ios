@@ -17,6 +17,8 @@
 		6985B01F2357A07900606F15 /* PersonSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B01E2357A07900606F15 /* PersonSearchPresenter.swift */; };
 		6985B0212357A08E00606F15 /* PersonSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B0202357A08E00606F15 /* PersonSearchRouter.swift */; };
 		6985B0232357A16000606F15 /* PersonSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B0222357A16000606F15 /* PersonSearchProtocols.swift */; };
+		6985B0252357AC0000606F15 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B0242357AC0000606F15 /* People.swift */; };
+		6985B0272357AD0700606F15 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B0262357AD0700606F15 /* Country.swift */; };
 		6995ED0F23562AE00034FA83 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6995ED0D23562AE00034FA83 /* EpisodeTableViewCell.swift */; };
 		6995ED1023562AE00034FA83 /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6995ED0E23562AE00034FA83 /* EpisodeTableViewCell.xib */; };
 		6995ED1A23562B5B0034FA83 /* ShowDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6995ED1923562B5A0034FA83 /* ShowDetailView.xib */; };
@@ -81,6 +83,8 @@
 		6985B01E2357A07900606F15 /* PersonSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchPresenter.swift; sourceTree = "<group>"; };
 		6985B0202357A08E00606F15 /* PersonSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchRouter.swift; sourceTree = "<group>"; };
 		6985B0222357A16000606F15 /* PersonSearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchProtocols.swift; sourceTree = "<group>"; };
+		6985B0242357AC0000606F15 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		6985B0262357AD0700606F15 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		6995ED0D23562AE00034FA83 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		6995ED0E23562AE00034FA83 /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
 		6995ED1923562B5A0034FA83 /* ShowDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDetailView.xib; sourceTree = "<group>"; };
@@ -338,6 +342,8 @@
 				6995ED2723562C3B0034FA83 /* Show.swift */,
 				6995ED2523562C350034FA83 /* Image.swift */,
 				6995ED2323562C2E0034FA83 /* Episode.swift */,
+				6985B0242357AC0000606F15 /* People.swift */,
+				6985B0262357AD0700606F15 /* Country.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -733,6 +739,7 @@
 				6985B01D2357A06100606F15 /* PersonSearchInteractor.swift in Sources */,
 				6985B00F23578E6300606F15 /* MazeTabBarController.swift in Sources */,
 				6985B01A23579FCC00606F15 /* PersonSearchViewController.swift in Sources */,
+				6985B0252357AC0000606F15 /* People.swift in Sources */,
 				69A27DE9234CD0650005BB69 /* APIClient.swift in Sources */,
 				6985B00C23578D1C00606F15 /* NavigationBuilder.swift in Sources */,
 				6995ED3023562E580034FA83 /* StringsHelper.swift in Sources */,
@@ -743,6 +750,7 @@
 				6995ED2223562BF70034FA83 /* ShowDetailProtocols.swift in Sources */,
 				69A27DB9234CC4080005BB69 /* MazeModule.swift in Sources */,
 				69A27DEB234CD0DC0005BB69 /* APIRouter.swift in Sources */,
+				6985B0272357AD0700606F15 /* Country.swift in Sources */,
 				69A27DD4234CC5730005BB69 /* ShowListRouter.swift in Sources */,
 				6995ED0F23562AE00034FA83 /* EpisodeTableViewCell.swift in Sources */,
 				6995ED3A235631C80034FA83 /* ShowsDataManagerInterface.swift in Sources */,

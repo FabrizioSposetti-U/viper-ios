@@ -10,14 +10,18 @@ import Foundation
 
 protocol PersonSearchViewInterface: class {
     func setupInitialView()
+    func reloadData(personViewModels: [PersonViewModel])
 }
 
 protocol PersonSearchPresenterInterface: class {
     func notifyViewLoaded()
+    func personsFetchedFailed(withError: String)
+    func personsFetched(persons: [People])
+    func getPersons(name: String)
 }
 
 protocol PersonSearchInteractorInterface {
-    
+    func fetchPersons(name: String)
 }
 
 protocol PersonSearchRouterInterface {

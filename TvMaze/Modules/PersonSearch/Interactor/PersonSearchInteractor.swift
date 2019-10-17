@@ -20,4 +20,16 @@ class PersonSearchInteractor {
 
 extension PersonSearchInteractor: PersonSearchInteractorInterface {
     
+    func fetchPersons(name: String) {
+        apiDataManager?.getPersons(name: name)
+        .done { (persons: [People]) in
+                self.presenter?.personsFetched(persons: persons)
+            }
+                
+            .catch { error in
+                self.presenter?.personsFetchedFailed(withError: error.localizedDescription)
+            }
+    }
+    
+    
 }

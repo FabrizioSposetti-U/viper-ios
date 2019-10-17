@@ -19,6 +19,11 @@ class ShowsDataMangerAPI: ShowsDataManagerInterface {
     func getEpisodesFromShow(id: Int) -> Promise<[Episode]> {
         return APIClient.executeRequest(request: APIRouter.episodesFromShow(id: id))
     }
+    
+    func getPersons(name: String) -> Promise<[People]> {
+        return APIClient.executeRequest(request: APIRouter.persons(name: name))
+    }
+    
 }
 
 
