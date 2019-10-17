@@ -67,7 +67,7 @@ extension ShowListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShowTableViewCell", for: indexPath) as! ShowTableViewCell
-        setImageFrom(showViewModels[indexPath.row].imagen.medium, cell.showImage)
+        setImageFrom(showViewModels[indexPath.row].imagen.medium, cell.showImage, UIImage(named: "show-icon")!)
         cell.set(show: showViewModels[indexPath.row])
         return cell
     }

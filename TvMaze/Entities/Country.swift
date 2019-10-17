@@ -9,5 +9,5 @@
 import Foundation
 
 struct Country: Codable {
-    let name, code, timezone: String
+    let name: String?
 }

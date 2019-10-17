@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias PersonViewModel = (name: String, gender: String)
+typealias PersonViewModel = (name: String, countryName: String, imagen: Image?)
 
 class PersonSearchPresenter {
     
@@ -32,7 +32,7 @@ extension PersonSearchPresenter: PersonSearchPresenterInterface {
     func personsFetched(persons: [People]) {
         var personViewModels = [PersonViewModel]()
         for person in persons {
-            let personViewModel: PersonViewModel = ((person.person?.name ?? "noName"), (person.person?.gender ?? "No gender"))
+            let personViewModel: PersonViewModel = ((person.person?.name ?? "Name not found"), (person.person?.country?.name ?? "Country not found"), (person.person?.image ?? nil))
             personViewModels.append(personViewModel)
         }
         view?.reloadData(personViewModels: personViewModels)

@@ -21,6 +21,7 @@ struct PersonInformation: Codable {
     let name: String?
     let gender: String?
     let image: Image?
+    let country: Country?
 }
 
 

@@ -85,7 +85,7 @@ extension ShowDetailView: ShowDetailViewInterface {
         lblShowTitle.text = show.name
         lblShowLanguageValue.text = show.language
         lblShowStatusValue.text = show.status
-        setImageFrom(show.imagen.medium, showImage)
+        setImageFrom(show.imagen.medium, showImage, UIImage(named: "show-icon")!)
     }
     
     func showUIElements() {
@@ -117,13 +117,10 @@ extension ShowDetailView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as! EpisodeTableViewCell
-        if let imagen = episodesViewModel[indexPath.row].imagen {
-            setImageFrom(imagen.original, cell.episodeImage)
-        }
+        let imagen = episodesViewModel[indexPath.row].imagen?.original
+        setImageFrom(imagen, cell.episodeImage, UIImage(named: "show-icon")!)
         cell.set(episode: episodesViewModel[indexPath.row])
         return cell
-        
-        
     }
     
     

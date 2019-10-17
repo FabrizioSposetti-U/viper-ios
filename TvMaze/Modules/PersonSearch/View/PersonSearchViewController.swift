@@ -32,7 +32,7 @@ extension PersonSearchViewController: PersonSearchViewInterface {
     }
     
     func configureTableView() {
-        tableView.register(UINib(nibName: ShowTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ShowTableViewCell.nibName)
+        tableView.register(UINib(nibName: PersonTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: PersonTableViewCell.nibName)
         tableView.separatorColor = UIColor.black
         tableView.backgroundColor = UIColor.secondarySystemBackground
         tableView.delegate = self
@@ -58,8 +58,11 @@ extension PersonSearchViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = persons[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell", for: indexPath) as! PersonTableViewCell
+        let person = persons[indexPath.row]
+        let imagen = person.imagen?.medium
+        setImageFrom(imagen, cell.personImage, UIImage(named: "person-icon")!)
+        cell.setCell(person: person)
         return cell
     }
     
