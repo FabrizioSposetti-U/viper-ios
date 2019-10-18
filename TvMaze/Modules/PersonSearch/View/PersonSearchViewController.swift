@@ -60,8 +60,6 @@ extension PersonSearchViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as PersonTableViewCell
         let person = persons[indexPath.row]
-        let imagen = person.imagen?.medium
-        setImageFrom(imagen, cell.personImage, UIImage(named: "person-icon")!)
         cell.setCell(person: person)
         return cell
     }

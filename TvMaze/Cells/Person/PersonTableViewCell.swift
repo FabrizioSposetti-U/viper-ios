@@ -17,6 +17,8 @@ class PersonTableViewCell: UITableViewCell {
     func setCell(person: PersonViewModel) {
         lblPersonName.text = person.name
         lblCountryName.text = person.countryName
+        KingFisherHelper.setImageFrom(url: person.imagen?.medium, in: personImage, withPlaceholder: UIImage(named: "person-icon")!)
     }
+    
     
 }

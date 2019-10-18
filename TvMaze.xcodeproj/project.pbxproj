@@ -11,6 +11,7 @@
 		690EEDB5235A0D0F00A4C4C3 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEDB4235A0D0F00A4C4C3 /* UITableViewCell.swift */; };
 		690EEDB7235A195200A4C4C3 /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEDB6235A195200A4C4C3 /* PersonRepository.swift */; };
 		690EEDB9235A1A2B00A4C4C3 /* PersonRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEDB8235A1A2B00A4C4C3 /* PersonRepositoryProtocol.swift */; };
+		690EEDBD235A245700A4C4C3 /* KingFisherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEDBC235A245700A4C4C3 /* KingFisherHelper.swift */; };
 		698347422356593100DA0C85 /* MockShowRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698347412356593100DA0C85 /* MockShowRepository.swift */; };
 		6985B00C23578D1C00606F15 /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B00B23578D1C00606F15 /* NavigationBuilder.swift */; };
 		6985B00F23578E6300606F15 /* MazeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6985B00E23578E6300606F15 /* MazeTabBarController.swift */; };
@@ -83,6 +84,7 @@
 		690EEDB4235A0D0F00A4C4C3 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		690EEDB6235A195200A4C4C3 /* PersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
 		690EEDB8235A1A2B00A4C4C3 /* PersonRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepositoryProtocol.swift; sourceTree = "<group>"; };
+		690EEDBC235A245700A4C4C3 /* KingFisherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherHelper.swift; sourceTree = "<group>"; };
 		698347412356593100DA0C85 /* MockShowRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShowRepository.swift; sourceTree = "<group>"; };
 		6985B00B23578D1C00606F15 /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
 		6985B00E23578E6300606F15 /* MazeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeTabBarController.swift; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				6995ED2F23562E580034FA83 /* StringsHelper.swift */,
+				690EEDBC235A245700A4C4C3 /* KingFisherHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -794,6 +797,7 @@
 				6995ED3A235631C80034FA83 /* ShowRepositoryProtocol.swift in Sources */,
 				699CC8DA234E7CDD006E1F22 /* ShowDetailRouter.swift in Sources */,
 				6995ED3C235631F50034FA83 /* ShowsReposotory.swift in Sources */,
+				690EEDBD235A245700A4C4C3 /* KingFisherHelper.swift in Sources */,
 				69A27DD9234CC5BD0005BB69 /* ShowListInteractor.swift in Sources */,
 				69C0DFA123589283001F3C96 /* PersonTableViewCell.swift in Sources */,
 				690EEDB9235A1A2B00A4C4C3 /* PersonRepositoryProtocol.swift in Sources */,

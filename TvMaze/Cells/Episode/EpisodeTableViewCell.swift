@@ -19,6 +19,7 @@ class EpisodeTableViewCell: UITableViewCell {
         lblNameEpisode.text = episode.name
         lblSeasonEpisode.text = episode.season
         lblNumberEpisode.text = episode.number
+        KingFisherHelper.setImageFrom(url: episode.imagen?.medium, in: episodeImage, withPlaceholder: UIImage(named: "show-icon")!)
     }
 
     

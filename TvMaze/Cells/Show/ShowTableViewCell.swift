@@ -17,6 +17,7 @@ class ShowTableViewCell: UITableViewCell {
     func set(show: ShowViewModel) {
         lblShowTitle.text = show.name
         lblTypeShow.text = "Type: " + "\(show.type)"
+        KingFisherHelper.setImageFrom(url: show.imagen.medium, in: showImage, withPlaceholder: UIImage(named: "show-icon")!)
     }
     
 }
