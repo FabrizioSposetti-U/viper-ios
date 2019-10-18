@@ -12,7 +12,7 @@ class MazeModule {
     
     static func createListShowModule(usingNavigationFactory factory: NavigationFactory) -> UIViewController {
         let view = ShowListView()
-        let interactor = ShowListInteractor(showsDataMangerAPI: ShowsDataMangerAPI())
+        let interactor = ShowListInteractor(showRepository: ShowsReposotory())
         let router = ShowListRouter()
         let presenter = ShowListPresenter()
         
@@ -29,7 +29,7 @@ class MazeModule {
     
     static func createShowDetailModule(forShow show: Show) -> UIViewController {
         let view = ShowDetailView(nibName: "ShowDetailView", bundle: nil) as ShowDetailView
-        let interactor = ShowDetailInteractor(apiDataManager: ShowsDataMangerAPI())
+        let interactor = ShowDetailInteractor(showRepository: ShowsReposotory())
         let router = ShowDetailRouter()
         let presenter = ShowDetailPresenter()
         
@@ -47,7 +47,7 @@ class MazeModule {
     
     static func createPersonSearchModule(usingNavigationFactory factory: NavigationFactory) -> UIViewController {
         let view = PersonSearchViewController()
-        let interactor = PersonSearchInteractor(showsDataMangerAPI: ShowsDataMangerAPI())
+        let interactor = PersonSearchInteractor(personRepository: PersonRepository())
         let router = PersonSearchRouter()
         let presenter = PersonSearchPresenter()
         

@@ -10,18 +10,18 @@ import Foundation
 
 class PersonSearchInteractor {
     
-    var apiDataManager: ShowsDataMangerAPI?
+    var personRepository: PersonRepositoryProtocol?
     weak var presenter: PersonSearchPresenterInterface?
     
-    init(showsDataMangerAPI: ShowsDataMangerAPI) {
-        apiDataManager = showsDataMangerAPI
+    init(personRepository: PersonRepositoryProtocol) {
+        self.personRepository = personRepository
     }
 }
 
 extension PersonSearchInteractor: PersonSearchInteractorInterface {
     
     func fetchPersons(name: String) {
-        apiDataManager?.getPersons(name: name)
+        personRepository?.getPersons(name: name)
         .done { (persons: [People]) in
                 self.presenter?.personsFetched(persons: persons)
             }

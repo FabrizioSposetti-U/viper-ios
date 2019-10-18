@@ -13,7 +13,7 @@ import PromiseKit
 class ShowListTests: XCTestCase {
     
     let view = ShowListView()
-    let interactor = ShowListInteractor(showsDataMangerAPI: MockApiDataManager())
+    let interactor = ShowListInteractor(showRepository: MockShowRepository())
     let router = ShowListRouter()
     let presenter = ShowListPresenter()
     

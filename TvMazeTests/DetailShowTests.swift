@@ -13,18 +13,18 @@ import PromiseKit
 class DetailShowTests: XCTestCase {
     
     let view = ShowDetailView()
-    let mockApiDataManager = MockApiDataManager()
+    let mockShowRepository = MockShowRepository()
     let router = ShowDetailRouter()
     let presenter = ShowDetailPresenter()
     
     
     override func setUp() {
-        let interactor = ShowDetailInteractor(apiDataManager: mockApiDataManager)
+        let interactor = ShowDetailInteractor(showRepository: mockShowRepository)
         
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
-        presenter.show = mockApiDataManager.createShow()
+        presenter.show = mockShowRepository.createShow()
         
         view.presenter = presenter
         interactor.presenter = presenter

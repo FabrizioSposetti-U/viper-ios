@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import Alamofire
 import PromiseKit
 
-protocol ShowsDataManagerInterface {
+protocol ShowRepositoryProtocol {
     func getShows() -> Promise<[Show]>
     func getEpisodesFromShow(id: Int) -> Promise<[Episode]>
 }
