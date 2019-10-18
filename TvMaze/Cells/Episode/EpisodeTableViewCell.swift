@@ -14,9 +14,7 @@ class EpisodeTableViewCell: UITableViewCell {
     @IBOutlet weak var lblSeasonEpisode: UILabel!
     @IBOutlet weak var lblNumberEpisode: UILabel!
     @IBOutlet weak var episodeImage: UIImageView!
-    
-    static let nibName = "EpisodeTableViewCell"
-    
+        
     func set(episode: EpisodeViewModel) {
         lblNameEpisode.text = episode.name
         lblSeasonEpisode.text = episode.season

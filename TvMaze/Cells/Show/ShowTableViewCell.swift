@@ -10,8 +10,6 @@ import UIKit
 
 class ShowTableViewCell: UITableViewCell {
     
-    static let nibName = "ShowTableViewCell"
-
     @IBOutlet weak var showImage: UIImageView!
     @IBOutlet weak var lblShowTitle: UILabel!
     @IBOutlet weak var lblTypeShow: UILabel!

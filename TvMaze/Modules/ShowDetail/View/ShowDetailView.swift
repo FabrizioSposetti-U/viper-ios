@@ -45,7 +45,7 @@ extension ShowDetailView: ShowDetailViewInterface {
     func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: EpisodeTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: EpisodeTableViewCell.nibName)
+        tableView.register(EpisodeTableViewCell.self)
         tableView.separatorColor = UIColor.black
         tableView.backgroundColor = UIColor.secondarySystemBackground
         tableView.delegate = self
@@ -116,7 +116,7 @@ extension ShowDetailView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as! EpisodeTableViewCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as EpisodeTableViewCell
         let imagen = episodesViewModel[indexPath.row].imagen?.original
         setImageFrom(imagen, cell.episodeImage, UIImage(named: "show-icon")!)
         cell.set(episode: episodesViewModel[indexPath.row])
