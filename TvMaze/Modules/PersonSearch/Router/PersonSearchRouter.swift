@@ -15,4 +15,13 @@ class PersonSearchRouter {
 
 extension PersonSearchRouter: PersonSearchRouterInterface {
     
+    func presentPersonDetail(forPerson person: PersonViewModel) {
+        
+        let personDetailView = MazeModule.createPersonDetailModule(forPerson: person)
+        
+        viewController?.navigationController?.pushViewController(personDetailView, animated: true)
+        
+    }
+    
+    
 }

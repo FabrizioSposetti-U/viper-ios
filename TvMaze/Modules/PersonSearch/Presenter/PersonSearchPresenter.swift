@@ -42,4 +42,8 @@ extension PersonSearchPresenter: PersonSearchPresenterInterface {
         print("personsFetchedFailed")
     }
     
+    func showPersonDetail(person: PersonViewModel) {
+        router?.presentPersonDetail(forPerson: person)
+    }
+    
 }
