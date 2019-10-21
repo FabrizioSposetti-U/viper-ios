@@ -64,6 +64,10 @@ extension PersonSearchViewController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.showPersonDetail(person: persons[indexPath.row])
+    }
+    
 }
 
 extension PersonSearchViewController: UISearchBarDelegate {

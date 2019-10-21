@@ -18,6 +18,7 @@ protocol PersonSearchPresenterInterface: class {
     func personsFetchedFailed(withError: String)
     func personsFetched(persons: [People])
     func getPersons(name: String)
+    func showPersonDetail(person: PersonViewModel)
 }
 
 protocol PersonSearchInteractorInterface {
@@ -25,5 +26,5 @@ protocol PersonSearchInteractorInterface {
 }
 
 protocol PersonSearchRouterInterface {
-    
+    func presentPersonDetail(forPerson: PersonViewModel)
 }

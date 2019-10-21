@@ -62,4 +62,22 @@ class MazeModule {
         return factory(view)
     }
     
+    static func createPersonDetailModule(forPerson person: PersonViewModel) -> UIViewController {
+        let view = PersonDetailView(nibName: "PersonDetailView", bundle: nil) as PersonDetailView
+        let interactor = PersonDetailInteractor(personRepository: PersonRepository())
+        let router = PersonDetailRouter()
+        let presenter = PersonDetailPresenter()
+        
+        presenter.view = view
+        presenter.person = person
+        presenter.router = router
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+        
+        return view
+    }
+    
 }
