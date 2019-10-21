@@ -1,5 +1,4 @@
 //
-//  MockApiDataManager.swift
 //  TvMazeTests
 //
 //  Created by Fabrizio Sposetti on 15/10/2019.
@@ -10,7 +9,7 @@ import Foundation
 import PromiseKit
 @testable import TvMaze
 
-class MockApiDataManager: ShowsDataMangerAPI {
+class MockShowRepository: ShowsReposotory {
     
     override func getShows() -> Promise<[Show]> {
         return Promise.value([

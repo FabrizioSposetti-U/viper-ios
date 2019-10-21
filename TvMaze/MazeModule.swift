@@ -2,10 +2,17 @@ import UIKit
 
 class MazeModule {
     
-    static func buildListShowModule() -> UIViewController {
-        let navBar = UINavigationController()
+    static func createTabBarModule(usingSubModules submodules: TabBarRouter.Submdoules) -> UITabBarController {
+        
+        let tabs = TabBarRouter.tabs(usingSubModules: submodules)
+        let tabBarController = MazeTabBarController(tabs: tabs)
+        
+        return tabBarController
+    }
+    
+    static func createListShowModule(usingNavigationFactory factory: NavigationFactory) -> UIViewController {
         let view = ShowListView()
-        let interactor = ShowListInteractor(showsDataMangerAPI: ShowsDataMangerAPI())
+        let interactor = ShowListInteractor(showRepository: ShowsReposotory())
         let router = ShowListRouter()
         let presenter = ShowListPresenter()
         
@@ -16,16 +23,13 @@ class MazeModule {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
-        
-        navBar.setViewControllers([view], animated: true)
-        
-        return navBar
+                
+        return factory(view)
     }
-    
     
     static func createShowDetailModule(forShow show: Show) -> UIViewController {
         let view = ShowDetailView(nibName: "ShowDetailView", bundle: nil) as ShowDetailView
-        let interactor = ShowDetailInteractor(apiDataManager: ShowsDataMangerAPI())
+        let interactor = ShowDetailInteractor(showRepository: ShowsReposotory())
         let router = ShowDetailRouter()
         let presenter = ShowDetailPresenter()
         
@@ -41,5 +45,21 @@ class MazeModule {
         return view
     }
     
+    static func createPersonSearchModule(usingNavigationFactory factory: NavigationFactory) -> UIViewController {
+        let view = PersonSearchViewController()
+        let interactor = PersonSearchInteractor(personRepository: PersonRepository())
+        let router = PersonSearchRouter()
+        let presenter = PersonSearchPresenter()
+        
+        presenter.view = view
+        presenter.router = router
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+                
+        return factory(view)
+    }
     
 }

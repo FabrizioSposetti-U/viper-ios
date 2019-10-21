@@ -38,5 +38,7 @@ enum Text: String, LocalizedEnum {
     case TryAgain
     case Cancel
     case ErrorAlertMessage
+    case SearchPeople
+    case Persons
     
 }

@@ -45,7 +45,7 @@ extension ShowDetailView: ShowDetailViewInterface {
     func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: EpisodeTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: EpisodeTableViewCell.nibName)
+        tableView.register(EpisodeTableViewCell.self)
         tableView.separatorColor = UIColor.black
         tableView.backgroundColor = UIColor.secondarySystemBackground
         tableView.delegate = self
@@ -85,7 +85,7 @@ extension ShowDetailView: ShowDetailViewInterface {
         lblShowTitle.text = show.name
         lblShowLanguageValue.text = show.language
         lblShowStatusValue.text = show.status
-        setImageFrom(show.imagen.medium, showImage)
+        KingFisherHelper.setImageFrom(url: show.imagen.medium, in: showImage, withPlaceholder: UIImage(named: "show-icon")!)
     }
     
     func showUIElements() {
@@ -116,14 +116,9 @@ extension ShowDetailView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as! EpisodeTableViewCell
-        if let imagen = episodesViewModel[indexPath.row].imagen {
-            setImageFrom(imagen.original, cell.episodeImage)
-        }
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as EpisodeTableViewCell
         cell.set(episode: episodesViewModel[indexPath.row])
         return cell
-        
-        
     }
     
     

@@ -2,10 +2,10 @@
 class ShowListInteractor {
     
     weak var presenter: ShowsListPresenterInterface?
-    var apiDataManager: ShowsDataMangerAPI?
+    var showRepository: ShowsReposotory?
     
-    init(showsDataMangerAPI: ShowsDataMangerAPI) {
-        apiDataManager = showsDataMangerAPI
+    init(showRepository: ShowsReposotory) {
+        self.showRepository = showRepository
     }
     
 }
@@ -13,7 +13,7 @@ class ShowListInteractor {
 extension ShowListInteractor: ShowsListInteractorInterface {
     
     func fetchShowList() {
-        apiDataManager?.getShows()
+        showRepository?.getShows()
         .done { (shows: [Show]) in
             self.presenter?.showListFetched(showList: shows)
         }

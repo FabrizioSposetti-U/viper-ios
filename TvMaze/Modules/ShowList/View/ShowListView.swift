@@ -44,7 +44,7 @@ extension ShowListView: ShowsListViewInterface {
     }
     
     func configureTableView() {
-        tableView.register(UINib(nibName: ShowTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ShowTableViewCell.nibName)
+        tableView.register(ShowTableViewCell.self)
         tableView.separatorColor = UIColor.black
         tableView.backgroundColor = UIColor.secondarySystemBackground
         tableView.delegate = self
@@ -66,8 +66,7 @@ extension ShowListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShowTableViewCell", for: indexPath) as! ShowTableViewCell
-        setImageFrom(showViewModels[indexPath.row].imagen.medium, cell.showImage)
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as ShowTableViewCell
         cell.set(show: showViewModels[indexPath.row])
         return cell
     }

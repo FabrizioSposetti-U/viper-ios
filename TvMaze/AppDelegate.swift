@@ -16,10 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let showListView = MazeModule.buildListShowModule()
+        let submodules: TabBarRouter.Submdoules = (
+            shows: MazeModule.createListShowModule(usingNavigationFactory: NavigationBuilder.build),
+            persons: MazeModule.createPersonSearchModule(usingNavigationFactory: NavigationBuilder.build))
+            
+        let tabBarController = MazeModule.createTabBarModule(usingSubModules: submodules)
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = showListView
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
         return true

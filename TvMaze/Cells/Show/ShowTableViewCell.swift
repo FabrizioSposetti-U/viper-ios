@@ -10,8 +10,6 @@ import UIKit
 
 class ShowTableViewCell: UITableViewCell {
     
-    static let nibName = "ShowTableViewCell"
-
     @IBOutlet weak var showImage: UIImageView!
     @IBOutlet weak var lblShowTitle: UILabel!
     @IBOutlet weak var lblTypeShow: UILabel!
@@ -19,6 +17,7 @@ class ShowTableViewCell: UITableViewCell {
     func set(show: ShowViewModel) {
         lblShowTitle.text = show.name
         lblTypeShow.text = "Type: " + "\(show.type)"
+        KingFisherHelper.setImageFrom(url: show.imagen.medium, in: showImage, withPlaceholder: UIImage(named: "show-icon")!)
     }
     
 }

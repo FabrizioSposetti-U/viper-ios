@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import Alamofire
 import PromiseKit
 
-class ShowsDataMangerAPI: ShowsDataManagerInterface {
+class ShowsReposotory: ShowRepositoryProtocol {
     
     func getShows() -> Promise<[Show]> {
        return APIClient.executeRequest(request: APIRouter.shows)
@@ -19,6 +18,7 @@ class ShowsDataMangerAPI: ShowsDataManagerInterface {
     func getEpisodesFromShow(id: Int) -> Promise<[Episode]> {
         return APIClient.executeRequest(request: APIRouter.episodesFromShow(id: id))
     }
+    
 }
 
 

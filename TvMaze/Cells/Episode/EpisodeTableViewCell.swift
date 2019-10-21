@@ -14,13 +14,12 @@ class EpisodeTableViewCell: UITableViewCell {
     @IBOutlet weak var lblSeasonEpisode: UILabel!
     @IBOutlet weak var lblNumberEpisode: UILabel!
     @IBOutlet weak var episodeImage: UIImageView!
-    
-    static let nibName = "EpisodeTableViewCell"
-    
+        
     func set(episode: EpisodeViewModel) {
         lblNameEpisode.text = episode.name
         lblSeasonEpisode.text = episode.season
         lblNumberEpisode.text = episode.number
+        KingFisherHelper.setImageFrom(url: episode.imagen?.medium, in: episodeImage, withPlaceholder: UIImage(named: "show-icon")!)
     }
 
     
