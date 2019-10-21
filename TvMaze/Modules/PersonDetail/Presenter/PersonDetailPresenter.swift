@@ -18,4 +18,11 @@ class PersonDetailPresenter {
 
 extension PersonDetailPresenter: PersonDetailPresenterInterface {
     
+    func notifyViewLoaded() {
+        if let person = person {
+            view?.setupInitialView(person: person)
+        }
+    }
+    
+    
 }

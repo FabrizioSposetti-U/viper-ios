@@ -10,11 +10,13 @@ import Foundation
 
 protocol PersonDetailViewInterface: class {
     var presenter: PersonDetailPresenterInterface? { get set }
+    
+    func setupInitialView(person: PersonViewModel)
 }
 
 
 protocol PersonDetailPresenterInterface: class {
-    
+    func notifyViewLoaded()
 }
 
 protocol PersonDetailRouterInterface: class {
